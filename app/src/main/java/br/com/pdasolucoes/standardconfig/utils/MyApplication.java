@@ -68,7 +68,7 @@ public class MyApplication extends Application implements DialogInterface.OnShow
 
             @Override
             public void onActivityPaused(@NonNull Activity activity) {
-                getInstance().unregisterReceiver(receiver);
+                //getInstance().unregisterReceiver(receiver);
             }
 
             @Override
