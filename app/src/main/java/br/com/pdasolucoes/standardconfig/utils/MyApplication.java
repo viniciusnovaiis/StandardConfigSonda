@@ -58,8 +58,8 @@ public class MyApplication extends Application implements DialogInterface.OnShow
             public void onActivityResumed(@NonNull final Activity activity) {
                 NavigationHelper.setCurrentAppCompat((AppCompatActivity) activity);
 
-                IntentFilter filter = new IntentFilter(Service.ACTION);
-                instance.registerReceiver(receiver, filter);
+//                IntentFilter filter = new IntentFilter(Service.ACTION);
+//                instance.registerReceiver(receiver, filter);
 
                 if (!isCorrectVersion()){
                     NetworkManager.sendRequest(new GetMobileVersionRequest());

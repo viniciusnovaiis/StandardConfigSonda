@@ -8,7 +8,6 @@ import br.com.pdasolucoes.standardconfig.service.AuthenticationGet;
 import br.com.pdasolucoes.standardconfig.service.AuthenticationPost;
 import br.com.pdasolucoes.standardconfig.utils.ConfigurationHelper;
 import br.com.pdasolucoes.standardconfig.utils.MyApplication;
-import br.com.pdasolucoes.standardconfig.utils.Service;
 import br.com.pdasolucoes.standardconfig.utils.TimerVerifyToken;
 
 public class AuthManager {
@@ -41,12 +40,12 @@ public class AuthManager {
         timerVerifyToken.start();
     }
 
-    public static void launchService() {
-
-        Intent i = new Intent(MyApplication.getInstance(), Service.class);
-        i.putExtra("token", ConfigurationHelper.loadPreference(ConfigurationHelper.ConfigurationEntry.Token, ""));
-        MyApplication.getInstance().startService(i);
-    }
+//    public static void launchService() {
+//
+//        Intent i = new Intent(MyApplication.getInstance(), Service.class);
+//        i.putExtra("token", ConfigurationHelper.loadPreference(ConfigurationHelper.ConfigurationEntry.Token, ""));
+//        MyApplication.getInstance().startService(i);
+//    }
 
     public static void AuthApi(String login, String password) {
         NetworkManager.sendRequest(new AuthenticationPost(login, password));

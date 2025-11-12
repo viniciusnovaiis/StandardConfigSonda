@@ -29,9 +29,6 @@
         android:usesCleartextTraffic="true"
         android:intentMatchingFlags="enforceIntentFilter"
         tools:targetApi="36">
-        <service
-            android:name=".utils.Service"
-            android:exported="false" />
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
