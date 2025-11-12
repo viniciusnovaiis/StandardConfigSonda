@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/filial">
+
+        <Preference
+            android:key="@string/pref_filial_key"
+            android:title="@string/pref_filial" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
