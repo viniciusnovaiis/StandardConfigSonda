@@ -27,10 +27,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m">
+        android:intentMatchingFlags="enforceIntentFilter"
+        tools:targetApi="36">
         <service
             android:name=".utils.Service"
-            android:exported="true" />
+            android:exported="false" />
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
