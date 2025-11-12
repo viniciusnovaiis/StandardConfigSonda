@@ -58,6 +58,6 @@ dependencies {
 //    }
 //}
 
-task deleteOldJar(type: Delete) {
+tasks.register('deleteOldJar', Delete) {
     delete 'release/AndroidPlugin.jar'
 }
