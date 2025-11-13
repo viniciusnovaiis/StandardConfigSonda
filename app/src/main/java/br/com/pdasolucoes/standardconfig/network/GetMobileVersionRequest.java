@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Build;
 import android.text.TextUtils;
 
 import org.ksoap2.serialization.SoapObject;
@@ -44,8 +45,11 @@ public class GetMobileVersionRequest extends SoapRequestBase {
         if (context == null || data == null)
             return;
 
-        if (!PermissionHelper.checkWriteExternalStoragePermission(context))
-            return;
+
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.R) {
+            if (!PermissionHelper.checkWriteExternalStoragePermission(context))
+                return;
+        }
 
         String mobileVersion;
         String mobileUpdateDescription;
